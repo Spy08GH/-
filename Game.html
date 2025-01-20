@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра с клавишами</title>
+    <script>
+        function getRandomChar() {
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            const randomIndex = Math.floor(Math.random() * chars.length);
+            return chars[randomIndex];
+        }
+
+        // Функция, которая будет запускать игру
+        function game() {
+            const key = getRandomChar();
+            const logger = `Вы нажали ${key} !!!`;
+            alert(logger);
+        }
+    </script>
+</head>
+<body>
+    <h1>Нажмите на кнопку для начала игры</h1>
+    <button onclick="game()">Играть</button>
+</body>
+</html>
