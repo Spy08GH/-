@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой пример</title>
+</head>
+<body>
+    <h1>Привет, мир!</h1>
+    <p id="message">Нажми на кнопку, чтобы изменить текст.</p>
+    <button onclick="changeText()">Изменить текст</button>
+
+    <script>
+        function changeText() {
+            document.getElementById("message").innerText = "Текст был изменен!";
+        }
+    </script>
+</body>
+</html>
