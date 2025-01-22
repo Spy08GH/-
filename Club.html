@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Логическая задача</title>
+</head>
+<body>
+    <h1>Какую цифру назвал журналист, чтобы его пустили внутрь?</h1>
+    <button onclick="checkAnswer()">Проверить ответ</button>
+    <p id="response"></p>
+
+    <script>
+        function checkAnswer() {
+            // Вопрос: сколько букв в слове "Девять"?
+            let correctAnswer = 5; // Количество букв в слове "Девять"
+            
+            // Ответ журналиста
+            let journalistAnswer = prompt("Какую цифру назвал журналист?");
+            
+            // Проверка ответа
+            if (parseInt(journalistAnswer) === correctAnswer) {
+                document.getElementById("response").textContent = "Вы правильно ответили! Вас пустят в клуб.";
+            } else {
+                document.getElementById("response").textContent = "Неправильный ответ. Попробуйте снова.";
+            }
+        }
+    </script>
+</body>
+</html>
