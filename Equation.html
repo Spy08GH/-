@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Решение квадратного уравнения</title>
+</head>
+<body>
+
+    <h2>Введите коэффициенты для квадратного уравнения (ax^2 + bx + c = 0)</h2>
+
+    <script>
+        // Запрашиваем у пользователя коэффициенты a, b, c
+        let a = parseFloat(prompt("Введите коэффициент a:"));
+        let b = parseFloat(prompt("Введите коэффициент b:"));
+        let c = parseFloat(prompt("Введите коэффициент c:"));
+
+        // Вычисляем дискриминант
+        let discr = b * b - 4 * a * c;
+
+        // Выводим дискриминант в alert
+        alert("Дискриминант D = " + discr.toString());
+    </script>
+
+</body>
+</html>
