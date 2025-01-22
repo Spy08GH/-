@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фасолины в горшке</title>
+</head>
+<body>
+    <h1>Результат: </h1>
+    <p id="result"></p>
+
+    <script>
+        let whiteBeans = 75; // количество белых фасолин
+        let blackBeans = 150; // количество черных фасолин
+        let tableBlackBeans = 0; // черные фасолины на столе
+
+        // Пока в горшке больше одной фасолины
+        while (whiteBeans + blackBeans > 1) {
+            // Достаем две фасолины
+            if (whiteBeans > 0 && blackBeans > 0) {
+                // Если одна фасолина черная, бросаем ее на стол, другую возвращаем в горшок
+                blackBeans--;
+                whiteBeans++;
+            } else if (whiteBeans >= 2) {
+                // Если обе фасолины белые, выбрасываем обе, а одну черную кидаем в горшок
+                whiteBeans -= 2;
+                tableBlackBeans++;
+            } else if (blackBeans >= 2) {
+                // Если обе фасолины черные, выбрасываем их
+                blackBeans -= 2;
+            }
+        }
+
+        // Когда в горшке остается 1 фасолина
+        let result = whiteBeans > 0 ? 'Белый горошек остался' : 'Черный горошек остался';
+        document.getElementById('result').textContent = result;
+    </script>
+</body>
+</html>
