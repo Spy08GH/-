@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача о рисе</title>
+    <script>
+        function calculateWeighings() {
+            // Для отмеривания 1 кг потребуется минимум 10 взвешиваний
+            const minWeighings = 10;
+
+            // Отображаем результат
+            document.getElementById('result').innerText = `Минимальное количество взвешиваний: ${minWeighings}`;
+        }
+    </script>
+</head>
+<body>
+    <h1>Задача о рисе</h1>
+    <p>Сколько взвешиваний потребуется, чтобы отмерить ровно 1 кг риса с гирей в 1 грамм и весами с двумя чашами?</p>
+    <button onclick="calculateWeighings()">Узнать ответ</button>
+    <p id="result"></p>
+</body>
+</html>
