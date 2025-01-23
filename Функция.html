@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математические операции</title>
+</head>
+<body>
+
+    <h1>Математические операции</h1>
+    <p id="result"></p>
+
+    <script>
+        function calc(a, b) {
+            // Проверка на наличие нулевого числа
+            if (a === 0 || b === 0) {
+                return "Операция невозможна";
+            }
+
+            // Проверка на четность чисел
+            if (a % 2 === 0 && b % 2 === 0) {
+                return a + b; // Если оба числа четные, возвращаем их сумму
+            } else {
+                return a - b; // Если хотя бы одно число нечетное, возвращаем их разность
+            }
+        }
+
+        // Примеры запуска функции:
+        console.log(calc(4, 6)); // 10
+        console.log(calc(3, 5)); // -2
+        console.log(calc(0, 5)); // Операция невозможна
+
+        // Выводим результат на страницу
+        document.getElementById('result').innerText = calc(4, 6); // Пример вызова функции
+    </script>
+
+</body>
+</html>
