@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица умножения</title>
+</head>
+<body>
+    <script>
+        // Создаём таблицу умножения от 1 до 10
+        let table = '';
+
+        for (let i = 1; i <= 10; i++) {
+            for (let j = 1; j <= 10; j++) {
+                table += (i * j).toString().padStart(4, ' ') + ' '; // Форматируем, чтобы числа были выровнены
+            }
+            table += '\n'; // Переход на новую строку после каждого ряда
+        }
+
+        // Выводим таблицу умножения в алерт
+        alert(table);
+    </script>
+</body>
+</html>
