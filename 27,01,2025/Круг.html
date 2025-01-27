@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Площадь круга</title>
+    <script>
+        // Функция для вычисления площади круга
+        function circleArea(radius) {
+            return Math.PI * Math.pow(radius, 2);
+        }
+
+        // Пример использования функции и отображение на странице
+        window.onload = function() {
+            const radius = 5;
+            const area = circleArea(radius);
+            
+            // Выводим результат в консоль
+            console.log('Площадь круга с радиусом ' + radius + ' = ' + area);
+            
+            // Отображаем результат на странице
+            document.getElementById("result").textContent = 'Площадь круга с радиусом ' + radius + ' = ' + area;
+        }
+    </script>
+</head>
+<body>
+    <h1>Расчет площади круга</h1>
+    <p id="result"></p> <!-- Место для вывода площади -->
+</body>
+</html>
